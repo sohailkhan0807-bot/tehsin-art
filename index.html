@@ -5,35 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tehsin Art | Professional Mehendi Artist in Mumbai</title>
   <style>
+    /* General Styles */
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background: #fff8f4;
       color: #333;
+      line-height: 1.6;
     }
-    header {
-      background: linear-gradient(to right, #6b1f2b, #a34a5c);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 18px;
-    }
+    a { text-decoration: none; }
     .btn {
       display: inline-block;
-      margin-top: 20px;
+      margin: 10px 5px 0;
       padding: 12px 25px;
       background: #d4af37;
       color: #000;
-      text-decoration: none;
       border-radius: 30px;
       font-weight: bold;
+      transition: transform 0.2s;
     }
+    .btn:hover { transform: scale(1.05); }
+ 
+    /* Header */
+    header {
+      background: linear-gradient(to right, #6b1f2b, #a34a5c);
+      color: white;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    header img { width: 120px; border-radius: 50%; margin-bottom: 15px; }
+    header h1 { font-size: 36px; margin: 0; }
+    header p { font-size: 16px; margin: 5px 0; }
+ 
+    /* Section Styles */
     section {
       padding: 50px 20px;
       max-width: 1100px;
@@ -41,12 +48,13 @@
     }
     h2 {
       color: #6b1f2b;
-      margin-bottom: 20px;
-      font-size: 30px;
+      margin-bottom: 25px;
+      font-size: 28px;
+      text-align: center;
     }
-    .services, .gallery {
+    .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
     }
     .card {
@@ -55,56 +63,67 @@
       border-radius: 12px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
       text-align: center;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+    .card:hover { transform: scale(1.05); }
+ 
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
     }
     .gallery img {
       width: 100%;
       border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
     }
+    .gallery img:hover { transform: scale(1.05); }
+ 
+    /* Contact */
+    .contact-info {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .contact-info strong { color: #6b1f2b; }
+ 
+    /* Footer */
     footer {
       background: #6b1f2b;
       color: white;
       text-align: center;
-      padding: 30px 20px;
+      padding: 25px 20px;
+      font-size: 14px;
     }
-    footer a {
-      color: #d4af37;
-      text-decoration: none;
+ 
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      header h1 { font-size: 28px; }
+      h2 { font-size: 22px; }
     }
-
-    .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
-}
- 
-.gallery-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
- 
-.gallery-item img:hover {
-  transform: scale(1.05);
-}
   </style>
 </head>
 <body>
  
+<!-- HEADER -->
 <header>
-  <img src="logo.jpg" alt="Tehsin Art Logo" style="width:150px; display:block; margin:auto;">
+  <img src="logo.jpg" alt="Tehsin Art Logo">
   <h1>Tehsin Art</h1>
-<p>Professional Mehendi Artist in Mumbai</p>
-<p>Elegant Bridal, Party & Festival Mehendi Designs</p>
-<p>Serving Across All Mumbai Locations</p>
-  <a class="btn" href="https://wa.me/918108153298">Book on WhatsApp</a>
-  <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeS15qwYfJ4LxkPlAARZamxgpSQNJBacNEjog4TKOg1BEn10A/viewform" target="_blank">Book Now</a>
+  <p>Professional Mehendi Artist in Mumbai</p>
+  <p>Elegant Bridal, Party & Festival Mehendi Designs</p>
+  <p>Serving Across All Mumbai Locations</p>
+  <div>
+    <a class="btn" href="https://wa.me/918108153298" target="_blank">Book on WhatsApp</a>
+    <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeS15qwYfJ4LxkPlAARZamxgpSQNJBacNEjog4TKOg1BEn10A/viewform" target="_blank">Book Now</a>
+  </div>
 </header>
  
+<!-- ABOUT -->
 <section>
   <h2>About Tehsin Art</h2>
-  <p>
+  <p style="text-align:center;">
     Tehsin Art is a professional Mehendi service based in Mumbai, specializing in
     bridal, Arabic, and traditional Mehendi designs. With years of experience and
     a passion for detailed artistry, we create elegant and long-lasting Mehendi
@@ -113,6 +132,7 @@
   </p>
 </section>
  
+<!-- SERVICES -->
 <section>
   <h2>Our Services</h2>
   <div class="services">
@@ -125,31 +145,35 @@
   </div>
 </section>
  
+<!-- GALLERY -->
 <section>
   <h2>Mehendi Gallery</h2>
   <div class="gallery">
-    <img src="shared image (1).jpg" />
-<img src="shared image (2).jpg" />
-<img src="shared image (3).jpg" />
-<img src="shared image (4).jpg" />
-<img src="shared image (5).jpg" />
-<img src="shared image (6).jpg" />
-<img src="shared image.jpg" />
+    <img src="shared image (1).jpg" alt="Mehendi 1">
+    <img src="shared image (2).jpg" alt="Mehendi 2">
+    <img src="shared image (3).jpg" alt="Mehendi 3">
+    <img src="shared image (4).jpg" alt="Mehendi 4">
+    <img src="shared image (5).jpg" alt="Mehendi 5">
+    <img src="shared image (6).jpg" alt="Mehendi 6">
+    <img src="shared image.jpg" alt="Mehendi 7">
   </div>
 </section>
  
+<!-- CONTACT -->
 <section>
   <h2>Contact & Booking</h2>
-  <p>
-    📍 Kurla / Sakinaka, Mumbai<br><br>
+  <div class="contact-info">
+    📍 Kurla / Sakinaka, Mumbai<br>
     📞 Phone & WhatsApp: <strong>8108153298</strong><br>
     📧 Email: <strong>TEHSINKHAN0807@GMAIL.COM</strong>
-  </p>
-  <a class="btn" href="https://wa.me/918108153298">Book Now on WhatsApp</a>
-<a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeS15qwYfJ4LxkPlAARZamxgpSQNJBacNEjog4TKOg1BEn10A/viewform" target="_blank">Book Now</a>
- 
+  </div>
+  <div style="text-align:center;">
+    <a class="btn" href="https://wa.me/918108153298" target="_blank">Book Now on WhatsApp</a>
+    <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeS15qwYfJ4LxkPlAARZamxgpSQNJBacNEjog4TKOg1BEn10A/viewform" target="_blank">Book Now</a>
+  </div>
 </section>
  
+<!-- FOOTER -->
 <footer>
   <p>© 2026 Tehsin Art | Mehendi Artist in Mumbai</p>
 </footer>
