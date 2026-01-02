@@ -70,6 +70,24 @@
       color: #d4af37;
       text-decoration: none;
     }
+
+    .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+ 
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+ 
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
   </style>
 </head>
 <body>
